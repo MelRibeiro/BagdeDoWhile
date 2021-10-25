@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  --grey: hsla(240, 9%, 89%, 1);
+  --black: hsla(240, 6%, 13%, 1);
+  --pink: hsl(348, 95%, 61%);
+  background-color: var(--black);
+  display: grid;
+  place-items: center;
+}
+
+main {
+  background: url(images/background.svg) no-repeat center/cover;
+  width: 100vw;
+  min-height: 812px;
+  height: 100vh;
+}
+
+.container {
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  color: var(--grey);
+}
+
+::selection {
+  background-color: var(--pink);
+  color: var(--black);
+}
+
+#animationLogo{
+  animation-duration: 5s;
+  animation-name: logo;
+}
+
+@keyframes logo {
+  from {
+  margin-left: 100%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+
+.avatar {
+  width: 10rem;
+  margin: 11.5rem auto 0;
+  position: relative;
+}
+
+.avatar span {
+  position: absolute;
+  top: -15px;
+  z-index: 1;
+}
+
+.avatar > img {
+  width: 10rem;
+  object-fit: cover;
+  clip-path:circle(50% at 50% 50%);
+}
+
+.userNameLink:hover {
+  color: var(--pink);
+}
+h1 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+
+a {
+  color: var(--grey);
+  text-decoration: none;
+  margin-top: 0.25rem;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  margin-top: 2rem;
+}
+
+ul {
+  margin-top: 4rem;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+li {
+  transition: transform 300ms ease-in-out;
+}
+
+li:hover {
+  background-color: var(--pink);
+  transform: translateY(-20%);
+}
+
